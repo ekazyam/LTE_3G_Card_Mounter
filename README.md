@@ -122,8 +122,7 @@ apt-get update && apt-get install wvdial
 nano /etc/wvdial.conf
 ~~~
 
-
-* EC21-J Mini PCIeの場合は以下を記載下さい。
+* 以下の内容を記載します。
 
 ~~~
 [Dialer Defaults]
@@ -148,30 +147,6 @@ Auto DNS = 1
 Check Def Route = 1
 ~~~
 
-* UC20-G Mini PCIeの場合は以下を記載下さい。
-
-~~~
-[Dialer Defaults]
-Init1 = ATZ
-Init2 = ATQ0 V1 E1 S0=0 &C1 &D2 +FCLASS=0
-Init3 = AT+CGDCONT=1,"IP","soracom.io"
-Dial Attempts = 3
-Stupid Mode = 1
-Modem Type = Analog Modem
-Dial Command = ATD
-Stupid Mode = yes
-Baud = 460800
-New PPPD = yes
-Modem = /dev/ttyUSB3
-ISDN = 0
-APN = soracom.io
-Phone = *99***1#
-Username = sora
-Password = sora
-Carrier Check = no
-Auto DNS = 1
-Check Def Route = 1
-~~~
 
 * 接続の確認を行います。
 
